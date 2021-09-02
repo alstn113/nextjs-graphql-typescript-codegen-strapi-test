@@ -16,11 +16,12 @@ function SiteHeader() {
       </Link>
       <nav className="categories">
         <span>Filter reviews by categories : </span>
-        {data.categories.map((category) => (
-          <Link key={category.id} href={`/category/${category.id}`}>
-            <a> {category.name}</a>
-          </Link>
-        ))}
+        {data &&
+          data.categories.map((category) => (
+            <Link key={category.id} href={`/category/${category.id}`}>
+              <a> {category.name}</a>
+            </Link>
+          ))}
       </nav>
     </div>
   );

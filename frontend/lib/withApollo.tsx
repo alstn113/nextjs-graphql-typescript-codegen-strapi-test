@@ -1,6 +1,6 @@
 import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache } from "@apollo/client";
-import { useRouter } from "next/router";
 import nextWithApollo from "next-with-apollo";
+import { useRouter } from "next/router";
 
 const withApollo = nextWithApollo(
   ({ initialState, headers }) => {
@@ -17,6 +17,7 @@ const withApollo = nextWithApollo(
   },
   {
     render: ({ Page, props }) => {
+      // eslint-disable-next-line react-hooks/rules-of-hooks
       const router = useRouter();
       return (
         <ApolloProvider client={props.apollo}>

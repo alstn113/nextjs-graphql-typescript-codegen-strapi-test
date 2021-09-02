@@ -1,19 +1,22 @@
 import Head from "next/head";
 
-function HeaderInfo({ title, contents, keyword }) {
+interface Props {
+  title: string;
+  content: string;
+}
+
+function HeaderInfo({ title, content }: Props) {
   return (
     <Head>
       <title>NEXT TEST - {title}</title>
-      <meta contents={contents} />
-      <meta keyword={keyword} />
+      <meta content={content} />
     </Head>
   );
 }
 
 HeaderInfo.defaultProps = {
   title: "NEXT TEST",
-  contents: "about next.js",
-  keyword: "hahaha",
+  content: "about nextjs",
 };
 
 export default HeaderInfo;

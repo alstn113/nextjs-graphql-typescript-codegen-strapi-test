@@ -6,7 +6,7 @@ generates:
   generated/index.tsx:
     config:
       reactApolloVersion: 3
-      avoidOptionals: true
+      withHooks: true
 
     plugins:
       - add:
